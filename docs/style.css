@@ -183,6 +183,10 @@ a:hover {
 }
 
 @media (max-width: 560px) {
+    body {
+        padding-top: 9rem;
+    }
+
     #nav_toggle {
         position: absolute;
         top: 1rem;
@@ -212,6 +216,20 @@ a:hover {
     .demo .img-grid {
         grid-template-columns: 1fr;
         grid-gap: 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        padding-top: 10rem;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .header strong {
+        font-size: 0.9rem;
     }
 }
 
