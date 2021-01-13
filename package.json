@@ -4,7 +4,9 @@
   "description": "A tiny jQuery plugin for adding hover effects to images.",
   "main": "imghover.js",
   "scripts": {
-    "build": "node_modules/webpack/bin/webpack.js"
+    "build": "node_modules/webpack/bin/webpack.js",
+    "docs": "node docs.js",
+    "all": "npm run build && npm run docs"
   },
   "repository": {
     "type": "git",
