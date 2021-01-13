@@ -29,7 +29,7 @@ Basic usage:
 </script>
 ```
 
-For more detailed usage, see the [demo site](#) which has a number of examples. 
+For more detailed usage, see the [demo site](https://taylordipentino.github.io/imghover/) which has a number of examples. 
 
 ## Options
 <table>
