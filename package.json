@@ -1,0 +1,30 @@
+{
+  "name": "imghover",
+  "version": "0.0.1",
+  "description": "A tiny jQuery plugin for adding hover effects to images.",
+  "main": "imghover.js",
+  "scripts": {
+    "build": "node_modules/webpack/bin/webpack.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taylordipentino/imghover.git"
+  },
+  "keywords": [
+    "jquery",
+    "plugin",
+    "image",
+    "effects"
+  ],
+  "author": "Taylor DiPentino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taylordipentino/imghover/issues"
+  },
+  "homepage": "https://github.com/taylordipentino/imghover#readme",
+  "devDependencies": {
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1"
+  }
+}

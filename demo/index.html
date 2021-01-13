@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/themes/prism.css">
+    <title>IMG Hover - Demo</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-brand">
+            <h1>IMG Hover</h1>
+            <strong>A tiny jQuery plugin for adding hover effects to images.</strong>
+        </div>
+        <button class="hamburger hamburger--collapse" id="nav_toggle">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <nav class="header-nav">
+            <ul style="display: none;">
+                <li>
+                    <a href="#">Basic Usage</a>
+                </li>
+                <li>
+                    <a href="#">Zoom</a>
+                </li>
+                <li>
+                    <a href="#">Grow</a>
+                </li>
+                <li>
+                    <a href="#">Other Options</a>
+                </li>
+                <li>
+                    <a href="https://github.com/taylordipentino/imghover" title="Fork on GitHub!">
+                        <svg class="github" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="wrapper">
+
+        <!-- Basic Demo -->
+        <div class="demo">
+            <h3>Basic Usage</h3>
+            <p>Applying the default options to a collection: </p>
+            <pre class="code language-js"><code class="language-js">$('img').imgHover();</code></pre>
+            <div class="img-grid demo1">
+                <img src="img1.jpg" width="300" height="300" alt="Placeholder image">
+
+                <img src="img2.jpg" width="300" height="300" alt="Placeholder image">
+
+                <img src="img3.jpg" width="300" height="300" alt="Placeholder image">
+
+                <img src="img4.jpg" width="300" height="300" alt="Placeholder image">
+            </div>
+        </div>
+
+        <!-- Zoom Demo -->
+        <div class="demo">
+            <h3>Zoom Effect Usage</h3>
+            <p>Disable the other default effects and change the default zoom scale: </p>
+            <pre class="code language-js"><code class="language-js">$('img').imgHover({radius: '0.5rem', grow: false, zoomScale: 1.2});</code></pre>
+            <div class="img-grid demo2">
+                <img src="img1.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img2.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img3.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img4.jpg" width="500" height="500" alt="Placeholder image">
+            </div>
+        </div>
+
+        <!-- Grow Demo -->
+        <div class="demo">
+            <h3>Grow Effect Usage</h3>
+            <p>Disable the other default effects and change the default grow scale: </p>
+            <pre class="code language-js"><code class="language-js">$('img').imgHover({radius: '0.5rem', zoom: false, growScale: 1.07});</code></pre>
+            <div class="img-grid demo3">
+                <img src="img1.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img2.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img3.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img4.jpg" width="500" height="500" alt="Placeholder image">
+            </div>
+
+            <p class="mt">You can also shrink the image by passing a negative grow scale value: </p>
+            <pre class="code language-js"><code class="language-js">$('img').imgHover({radius: '0.5rem', zoom: false, growScale: 0.98});</code></pre>
+            <div class="img-grid demo4">
+                <img src="img1.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img2.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img3.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img4.jpg" width="500" height="500" alt="Placeholder image">
+            </div>
+        </div>
+
+        <!-- Radius Demo -->
+        <div class="demo">
+            <h3>Change Border Radius</h3>
+            <p>If you have a border radius on your images, you need to pass the value as a parameter so it is applied to the wrapper div as well. This is set to false (disabled) by default, but you can change it to any valid property value (as a string) of the CSS border-radius property: </p>
+            <pre class="code language-js"><code class="language-js">$('img').imgHover(radius: '50%'});</code></pre>
+            <div class="img-grid demo5">
+                <img src="img1.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img2.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img3.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img4.jpg" width="500" height="500" alt="Placeholder image">
+            </div>
+        </div>
+
+        <!-- Sizing Demo -->
+        <div class="demo">
+            <h3>Explicit Sizing</h3>
+            <p>The default styling applies 100% width and automatic height to the image container and 100% width and height to the image. If you wish to change this you may pass an object with properties for both width and height to override the styles applied to the container: </p>
+            <pre class="code language-js"><code class="language-js">$('img').imgHover(size: {width: '50%', height: 'auto'}});</code></pre>
+            <div class="img-grid demo6">
+                <img src="img1.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img2.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img3.jpg" width="500" height="500" alt="Placeholder image">
+
+                <img src="img4.jpg" width="500" height="500" alt="Placeholder image">
+            </div>
+        </div>
+
+        <!-- Touch Demo -->
+        <div class="demo">
+            <h3>Touch Events</h3>
+            <p>By default, touch events are used so the effects will work on touch devices. If you wish to disable this, set the touch option to false: </p>
+            <pre class="code language-js"><code class="language-js">$('img').imgHover({touch: false});</code></pre>
+            <div class="img-grid demo7">
+                <img src="img1.jpg" width="300" height="300" alt="Placeholder image">
+
+                <img src="img2.jpg" width="300" height="300" alt="Placeholder image">
+
+                <img src="img3.jpg" width="300" height="300" alt="Placeholder image">
+
+                <img src="img4.jpg" width="300" height="300" alt="Placeholder image">
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p class="copyright">&copy; 2021 <a href="https://github.com/taylordipentino">Taylor DiPentino</a>. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/prismjs@1.23.0/components/prism-core.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="../dist/imghover.min.js"></script>
+    <script>
+        $('.demo1 > img').imgHover();
+        $('.demo2 > img').imgHover({
+            radius: '0.5rem',
+            grow: false,
+            zoomScale: 1.2
+        });
+        $('.demo3 > img').imgHover({
+            radius: '0.5rem',
+            zoom: false,
+            growScale: 1.07
+        });
+        $('.demo4 > img').imgHover({
+            radius: '0.5rem',
+            zoom: false,
+            growScale: 0.98
+        });
+        $('.demo5 > img').imgHover({
+            radius: '50%'
+        });
+        $('.demo6 > img').imgHover({
+            size: {
+                width: '50%',
+                height: 'auto'
+            }
+        });
+        $('.demo7 > img').imgHover({
+            touch: false
+        });
+
+        $('#nav_toggle').on('click', function() {
+            $(this).toggleClass('is-active');
+            $('.header-nav > ul').slideToggle();
+        });
+    </script>
+</body>
+
+</html>
